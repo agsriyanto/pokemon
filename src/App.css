@@ -1,42 +1,110 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* === Background Colors for Pokémon Types === */
+.card.grass {
+  background-color: #49d0b0;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.card.fire {
+  background-color: #ff6f61;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.card.water {
+  background-color: #76befe;
+}
+.card.electric {
+  background-color: #f7d02c;
+}
+.card.ice {
+  background-color: #76d1c1;
+}
+.card.fighting {
+  background-color: #c22e28;
+}
+.card.poison {
+  background-color: #a33ea1;
+}
+.card.ground {
+  background-color: #e2bf65;
+}
+.card.flying {
+  background-color: #a98ff3;
+}
+.card.psychic {
+  background-color: #f95587;
+}
+.card.bug {
+  background-color: #a6b91a;
+}
+.card.rock {
+  background-color: #b6a136;
+}
+.card.ghost {
+  background-color: #735797;
+}
+.card.dragon {
+  background-color: #6f35fc;
+}
+.card.dark {
+  background-color: #705746;
+}
+.card.steel {
+  background-color: #b7b7ce;
+}
+.card.fairy {
+  background-color: #d685ad;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.type-grass {
+  background-color: #42bb9e;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.type-fire {
+  background-color: #e56457;
 }
-
-.card {
-  padding: 2em;
+.type-water {
+  background-color: #539ddf;
 }
-
-.read-the-docs {
-  color: #888;
+.type-electric {
+  background-color: #f9cf30;
+}
+.type-ice {
+  background-color: #75d0c1;
+}
+.type-fighting {
+  background-color: #d3425f;
+}
+.type-poison {
+  background-color: #b763cf;
+}
+.type-ground {
+  background-color: #da7c4d;
+}
+.type-flying {
+  background-color: #a1bbec;
+}
+.type-psychic {
+  background-color: #fa8581;
+}
+.type-bug {
+  background-color: #95a617;
+}
+.type-rock {
+  background-color: #c9bb8a;
+}
+.type-ghost {
+  background-color: #5f6dbc;
+}
+.type-dragon {
+  background-color: #0c69c8;
+}
+.type-dark {
+  background-color: #595761;
+}
+.type-steel {
+  background-color: #5695a3;
+}
+.type-fairy {
+  background-color: #ee90e6;
 }

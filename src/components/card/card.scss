@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .type {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+  
+      span {
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+    }
+  
+    .img-pokemon {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99;
+      object-fit: contain;
+    }
+  }
+
+  .pokeball {
+    position: absolute;
+    right: -15px;
+    bottom: -10px;
+    object-fit: contain;
+    width: 60%;
+    height: 60%;
+    opacity: 0.1;
+    pointer-events: auto;
+    z-index: 0;
+  }
+}
