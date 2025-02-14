@@ -30,3 +30,29 @@ export const pokemonAtom = atom(async () => {
 
   return Promise.all(detailsPromises);
 });
+
+export const pokemonDetailAtom = atom(
+  async (get: any, pokemonId: string) => {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch Pokémon details");
+      }
+      const data = await response.json();
+
+      const pokemonDetails = {
+        name: data.name,
+        id: data.id,
+        sprite: data.sprites.front_default,
+        types: data.types.map((t: { type: { name: string } }) => t.type.name),
+        height: data.height,
+        weight: data.weight,
+      };
+
+      return pokemonDetails;
+    } catch (error) {
+      console.error("Error fetching Pokémon details:", error);
+      return null;
+    }
+  }
+);

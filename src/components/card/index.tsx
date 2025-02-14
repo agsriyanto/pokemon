@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 import "./card.scss";
 import pokeBall from "../../assets/pokeball.svg";
 import { Pokemon } from "../../types";
+import { formattedName } from "../../hooks";
 
 interface CardProps {
   pokemon: Pokemon;
@@ -8,13 +11,16 @@ interface CardProps {
 
 const Card = (props: CardProps) => {
   const { pokemon } = props;
+  const navigate = useNavigate();
 
-  const formattedName = (name: string) => {
-    return name.charAt(0).toUpperCase() + name.slice(1)
+  const handleCardClick = (id: string | number) => {
+    navigate(`/detail-pokemon/${id}`);
   };
 
+  console.log({pokemon})
+
   return (
-    <div className={`card ${pokemon.types[0]}`}>
+    <div className={`card ${pokemon.types[0]}`} onClick={() => handleCardClick(pokemon.id)}>
       <h2>{formattedName(pokemon.name)}</h2>
       <div className="content">
         <div className="type">
