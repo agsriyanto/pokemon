@@ -1,6 +1,6 @@
 # List Pokemon with Reactjs
 
-A simple Example Catalogue App built using **React.js ** with the **TypeScript**, and **Sass**.
+A simple Example List Pokemon built using **React.js ** with the **TypeScript**, and **Sass**.
 
 ---
 **Visit the Live Application**  
