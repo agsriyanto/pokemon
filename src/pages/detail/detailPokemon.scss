@@ -3,8 +3,42 @@
   cursor: auto;
   padding: 0;
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: 35%;
+    bottom: 90px;
+    width: 30%;
+    height: 30%;
+    background: url("../../assets/logo-sprout.png") no-repeat center/contain;
+    opacity: 0.05;
+    z-index: 0;
+  }
+
   &:hover {
     box-shadow: none;
+  }
+
+  .back {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    color: #000000;
+    gap: 10px;
+    padding: 5px 10px;
+
+    .back-arrow {
+      width: 20px;
+    }
+
+    &:hover {
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: fit-content;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
   }
 
   .content-header {
@@ -12,9 +46,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
-    h1 {
+    .pokemon-name {
       margin: 0;
+      font-size: xx-large;
     }
   
     .type {
@@ -23,7 +59,7 @@
       margin-top: 10px;
   
       span {
-        padding: 5px 10px;
+        padding: 5px 20px;
         border-radius: 20px;
       }
     }
@@ -31,13 +67,22 @@
     .id {
       font-weight: 500;
     }
+
+    .img-pokemon-detail {
+      position: absolute;
+      width: 20%;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
   }
 
   .content-body {
     padding: 3rem 2rem;
     background-color: #ffffff;
-    border-top-right-radius: 2rem;
-    border-top-left-radius: 2rem;
+    border-top-right-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
     margin-top: 2rem;
 
     .tabs {
@@ -54,6 +99,7 @@
         font-weight: 500;
         color: rgb(190, 190, 190);
         margin: 0;
+        z-index: 99;
   
         &.active {
           border-bottom: 1px solid rgb(35, 156, 255);
@@ -62,5 +108,36 @@
       }
     }
 
+  }
+}
+
+@media (max-width: 1024px) {
+  .detail-pokemon {
+    .content-header {
+      .img-pokemon-detail {
+        width: 35%;
+        top: 160px;
+      }
+    }
+
+    .content-body {
+      margin-top: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-pokemon {
+    .back {
+      margin-left: 1rem;
+    }
+    .content-header {
+      padding: 1rem;
+
+      .img-pokemon-detail {
+        width: 50%;
+        top: 160px;
+      }
+    }
   }
 }

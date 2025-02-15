@@ -1,0 +1,56 @@
+.base-status {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-top: 1rem;
+  color: #000000;
+
+  .stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .stat-name {
+      flex: 1;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .stat-value {
+      font-weight: bold;
+      min-width: 30px;
+    }
+
+    .stat-bar {
+      flex: 3;
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+
+      .bar {
+        height: 100%;
+        transition: width 0.3s ease-in-out;
+
+        &.low {
+          background-color: red;
+        }
+
+        &.high {
+          background-color: green;
+        }
+      }
+    }
+  }
+
+  .title-type {
+    margin: 1rem 0;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .type-description {
+    text-align: left;
+  }
+}

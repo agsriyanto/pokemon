@@ -1,5 +1,4 @@
 #root {
-  /* padding: 1rem; */
   width: 100%;
   overflow-x: hidden;
 }
@@ -56,6 +55,9 @@
 .card.fairy {
   background-color: #d685ad;
 }
+.card.normal {
+  background-color: #e7d473;
+}
 
 .type-grass {
   background-color: #42bb9e;
@@ -67,7 +69,7 @@
   background-color: #539ddf;
 }
 .type-electric {
-  background-color: #f9cf30;
+  background-color: #debb28;
 }
 .type-ice {
   background-color: #75d0c1;
@@ -107,4 +109,7 @@
 }
 .type-fairy {
   background-color: #ee90e6;
+}
+.type-normal {
+  background-color: #beb48c;
 }

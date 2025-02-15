@@ -1,16 +1,110 @@
-.title {
-  padding: 20px;
-  margin: 0;
+.dashboard {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 40vw;
+    height: 25vw;
+    max-width: 500px;
+    max-height: 300px;
+    background: url("../../assets/logo-sprout.jpg") no-repeat center/contain;
+    opacity: 0.15;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0;
+  }
+
+  &::before {
+    top: 40%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+
+    .title {
+      margin: 0;
+      font-size: xx-large;
+    }
+
+    .card-pagination {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      .pagination {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        padding: 5px 10px;
+        border: 1px solid #bbb7b7;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .left-arrow, .right-arrow {
+          width: 20px;
+        }
+      }
+    }
+  }
+  
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 }
 
-.pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  width: 100vw;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  overflow: hidden;
-  box-sizing: border-box;
+@media (max-width: 1024px) {
+  .dashboard {
+
+    &::after,
+    &::before {
+      width: 50vw;
+      height: 30vw;
+    }
+  }
+
+  .title {
+    font-size: large;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)) !important;
+  }
+
+  .card-pagination {
+    .pagination {
+      padding: 5px;
+
+      p {
+        font-size: small;
+      }
+    
+      .left-arrow,
+      .right-arrow {
+        width: 13px !important;
+      }
+    }
+  }
 }

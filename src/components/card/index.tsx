@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 import "./card.scss";
-import pokeBall from "../../assets/pokeball.svg";
 import { Pokemon } from "../../types";
 import { formattedName } from "../../hooks";
 
@@ -17,8 +16,6 @@ const Card = (props: CardProps) => {
     navigate(`/detail-pokemon/${id}`);
   };
 
-  console.log({pokemon})
-
   return (
     <div className={`card ${pokemon.types[0]}`} onClick={() => handleCardClick(pokemon.id)}>
       <h2>{formattedName(pokemon.name)}</h2>
@@ -30,7 +27,6 @@ const Card = (props: CardProps) => {
         </div>
         <img src={pokemon.sprite} alt="React" className="img-pokemon" />
       </div>
-      <img src={pokeBall} alt="Pokeball" className="pokeball" draggable={false} />
     </div>
   )
 };

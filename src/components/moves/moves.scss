@@ -1,0 +1,23 @@
+.moves {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding-top: 1rem;
+  color: #000000;
+
+  .moves-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) !important;
+    gap: 10px;
+    list-style-type: disc;
+  }
+
+  .move-item {
+    color: #000000;
+    width: fit-content;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
