@@ -19,6 +19,7 @@ export type DetailPokemon = {
     habitat: string;
     gender: string;
     moves?: any[];
+    stats: any[];
     evolution?: any[];
   };
 };

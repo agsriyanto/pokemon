@@ -9,7 +9,7 @@ import "./dashboard.scss";
 
 const Dashboard = () => {
   const [pokemonList] = useAtom(pokemonAtom);
-  const [offset, setOffset] = useAtom(offsetAtom);
+  const [, setOffset] = useAtom(offsetAtom);
 
   const handleNext = () => {
     setOffset((prev) => prev + 10);
