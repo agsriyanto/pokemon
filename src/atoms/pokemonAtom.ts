@@ -10,7 +10,7 @@ export const pokemonAtom = atom(async (get) => {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`
     );
-    if (!response.ok) throw new Error("Failed to fetch Pokémon list");
+    if (!response.ok) throw new Error("Failed to fetch Pokemon list");
 
     const data = await response.json();
 
